@@ -1,6 +1,7 @@
 import cipher from "./cipher.js";
 import { aritmetica } from "./functions.js";
 
+alert("Hello");
 document.querySelector("#hello").addEventListener("click", myFunction);
 
 function myFunction() {
