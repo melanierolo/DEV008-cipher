@@ -35,9 +35,28 @@
           </p>
         </article>
       </section>
+      <section>
+        <h2 class="cipher">Mensajes secretos, ¡Cifremos!</h2>
+        <h3>Mensaje :</h3>
+        <label for=""
+          >Offset(desplazamiento) :<input
+            name="cipher__input"
+            type="number"
+            min="1"
+        /></label>
+        <br />
+        <textarea
+          name="cipher__textarea"
+          cols="30"
+          rows="10"
+          placeholder="Ingresar el texto que desea cifrar o descifrar"
+        ></textarea>
+        <button id="cipher" onclick="goToCipher()">Cifrar</button>
+      </section>
       <div id="root">
         <h1>Hello world!</h1>
         <p>Prueba</p>
+        <p id="white">Hello</p>
         <button id="hello" onclick="hello()">Click</button>
       </div>
     </main>
