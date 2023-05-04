@@ -102,3 +102,19 @@ header {
   background-color: black;
   color: var(--white);
 }
+
+/*-----------------footer----------*/
+.footer {
+  padding: 25px;
+  background: #f2f2f2;
+  height: 70px;
+  width: 100%;
+}
+
+.footer__text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #06142e;
+}
