@@ -98,15 +98,3 @@ function goToCipher() {
 if (buttonCipher) {
   buttonCipher.addEventListener("click", goToCipher);
 }
-
-//Probando botón
-alert("Hello, welcome to MessageCypher");
-document.querySelector("#hello").addEventListener("click", myFunction);
-
-function myFunction() {
-  alert("hiciste click");
-}
-
-console.log("sumar", aritmetica.sumar(4, 5));
-console.log("restar", aritmetica.restar(10, 5));
-console.log(cipher);
