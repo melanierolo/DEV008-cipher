@@ -144,3 +144,46 @@ header {
   line-height: 18px;
   color: #06142e;
 }
+
+/*button*/
+.btn {
+  padding: 10px 5px;
+  margin: 16px;
+  border: none;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  /*text*/
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.05em;
+}
+
+.btn--primary {
+  color: #fefefe;
+  background: #6fcf97;
+}
+
+.btn--secondary {
+  color: #1b3358;
+  border-radius: 15px;
+}
+
+.btn--primary:hover {
+  background: #3ea26d;
+}
+
+.btn--secondary:hover {
+  background: #3ea26d;
+  color: #fefefe;
+}
+
+.btn--border {
+  border: 2px solid #3ea26d;
+}
+
+.btn--small {
+  width: 150px;
+}
