@@ -37,23 +37,27 @@
         </article>
       </section>
       <section class="cipher">
+
         <h2 class="cipher__title">Mensajes secretos, ¡Cifremos!</h2>
-        <article>
+        
+        <article class="cipher__content">
           <h3 class="cipher__subtitle">Mensaje :</h3>
           <label class="cipher__label" for=""
-            >Offset(desplazamiento) :<input
+            >Offset (desplazamiento) :<input
+              class="cipher__input"
               name="cipher__input"
+              placeholder="Número"
               type="number"
               min="1"
           /></label>
           <br />
           <textarea
+          class="cipher__textarea"
             name="cipher__textarea"
-            cols="60"
             rows="10"
             placeholder="Ingresar el texto que desea cifrar o descifrar"
           ></textarea>
-          <div>
+          <div class="cipher__buttons">
             <button
               class="btn btn--primary btn--small"
               id="cipher"
@@ -69,8 +73,10 @@
               Descifrar
             </button>
           </div>
+
+          <h3 class="cipher__subtitle">Mensaje cifrado / descifrado:</h3>
+          <p></p>
         </article>
-      </section>
     </main>
     <footer class="footer">
       <p class="footer__text">
