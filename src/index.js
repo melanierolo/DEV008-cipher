@@ -2,11 +2,13 @@ import { cipher } from "./cipher.js";
 
 const buttonCipher = document.getElementById("cipher");
 const buttonDecipher = document.getElementById("decipher");
+const buttonCopy = document.getElementById("copy");
 
 //Validando que los botones existen para no generar un ERROR
 if (buttonCipher || buttonDecipher) {
   buttonCipher.addEventListener("click", goToCipher);
   buttonDecipher.addEventListener("click", goToDecipher);
+  buttonCopy.addEventListener("click", goToCopy);
 }
 
 function goToCipher() {
@@ -41,5 +43,25 @@ function goToDecipher() {
     alert("el botón decipher funciona!!");
     cipherText.innerHTML = cipher.decipherMessage(inputTextarea, numberOffset);
     console.log(cipher.decipherMessage(inputTextarea, numberOffset));
+  }
+}
+
+function goToCopy() {
+  const copyText = document.getElementsByClassName("cipher__text")[0].innerText;
+  if ("Falta ingresar el texto que desea cifrar o descifrar." !== copyText) {
+    navigator.clipboard
+      .writeText(copyText)
+      .then(() => {
+        if (buttonCopy.innerText !== "Copiado!") {
+          const originalText = buttonCopy.innerText;
+          buttonCopy.innerText = "Copiado!";
+          setTimeout(() => {
+            buttonCopy.innerText = originalText;
+          }, 2500);
+        }
+      })
+      .catch((err) => {
+        console.log("Algo salió mal", err);
+      });
   }
 }
