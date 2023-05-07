@@ -136,18 +136,41 @@ header {
 
 .cipher__label {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 31px;
   color: #fefefe;
 }
 
 .cipher__textarea {
   background: #fefefe;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .cipher__buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.cipher__text {
+  background: #fefefe;
+  border: 2px solid #6fcf97;
+  padding: 16px;
+  min-height: 100px;
+  /*text*/
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  /*flex*/
+  display: flex;
+  align-items: start;
+  /*contenido que no alcanza*/
+  overflow: auto;
 }
 /*-----------------footer----------*/
 .footer {

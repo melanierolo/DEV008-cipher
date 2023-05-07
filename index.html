@@ -37,9 +37,8 @@
         </article>
       </section>
       <section class="cipher">
-
         <h2 class="cipher__title">Mensajes secretos, ¡Cifremos!</h2>
-        
+
         <article class="cipher__content">
           <h3 class="cipher__subtitle">Mensaje :</h3>
           <label class="cipher__label" for=""
@@ -52,10 +51,10 @@
           /></label>
           <br />
           <textarea
-          class="cipher__textarea"
+            class="cipher__textarea"
             name="cipher__textarea"
-            rows="10"
-            placeholder="Ingresar el texto que desea cifrar o descifrar"
+            rows="3"
+            placeholder="Escriba el texto que desea cifrar o descifrar en este campo."
           ></textarea>
           <div class="cipher__buttons">
             <button
@@ -75,8 +74,11 @@
           </div>
 
           <h3 class="cipher__subtitle">Mensaje cifrado / descifrado:</h3>
-          <p>Ingrese el texto que desea cifrar o descifrar.</p>
+          <p class="cipher__text" id="cipher__text">
+            Falta ingresar el texto que desea cifrar o descifrar.
+          </p>
         </article>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer__text">
