@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -36,34 +37,46 @@
         </article>
       </section>
       <section class="cipher">
+
         <h2 class="cipher__title">Mensajes secretos, ¡Cifremos!</h2>
-        <h3 class="cipher__subtitle">Mensaje :</h3>
-        <label class="cipher__label" for=""
-          >Offset(desplazamiento) :<input
-            name="cipher__input"
-            type="number"
-            min="1"
-        /></label>
-        <br />
-        <textarea
-          name="cipher__textarea"
-          cols="30"
-          rows="10"
-          placeholder="Ingresar el texto que desea cifrar o descifrar"
-        ></textarea>
-        <div>
-          <button
-            class="btn btn--primary btn--small"
-            id="cipher"
-            onclick="goToCipher()"
-          >
-            Cifrar
-          </button>
-          <button class="btn btn--secondary btn--small btn--border">
-            Descifrar
-          </button>
-        </div>
-      </section>
+        
+        <article class="cipher__content">
+          <h3 class="cipher__subtitle">Mensaje :</h3>
+          <label class="cipher__label" for=""
+            >Offset (desplazamiento) :<input
+              class="cipher__input"
+              name="cipher__input"
+              placeholder="Número"
+              type="number"
+              min="1"
+          /></label>
+          <br />
+          <textarea
+          class="cipher__textarea"
+            name="cipher__textarea"
+            rows="10"
+            placeholder="Ingresar el texto que desea cifrar o descifrar"
+          ></textarea>
+          <div class="cipher__buttons">
+            <button
+              class="btn btn--primary btn--small"
+              id="cipher"
+              onclick="goToCipher()"
+            >
+              Cifrar
+            </button>
+            <button
+              class="btn btn--secondary btn--small btn--border"
+              id="decipher"
+              onclick="goToDecipher()"
+            >
+              Descifrar
+            </button>
+          </div>
+
+          <h3 class="cipher__subtitle">Mensaje cifrado / descifrado:</h3>
+          <p>Ingrese el texto que desea cifrar o descifrar.</p>
+        </article>
     </main>
     <footer class="footer">
       <p class="footer__text">
