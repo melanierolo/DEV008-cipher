@@ -1,4 +1,4 @@
-import { cipher } from "./cipher.js";
+import cipher from "./cipher.js";
 
 const buttonCipher = document.getElementById("cipher");
 const buttonDecipher = document.getElementById("decipher");
@@ -23,8 +23,8 @@ function goToCipher() {
       "Por favor,ingrese el valor del offset como un número entero positivo (Ej. 4,5,etc)."
     );
   } else {
-    cipherText.innerHTML = cipher.cipherMessage(inputTextarea, numberOffset);
-    console.log(cipher.cipherMessage(inputTextarea, numberOffset));
+    cipherText.innerHTML = cipher.cipherMessage(numberOffset, inputTextarea);
+    console.log(cipher.cipherMessage(numberOffset, inputTextarea));
   }
 }
 
@@ -41,8 +41,8 @@ function goToDecipher() {
     );
   } else {
     alert("el botón decipher funciona!!");
-    cipherText.innerHTML = cipher.decipherMessage(inputTextarea, numberOffset);
-    console.log(cipher.decipherMessage(inputTextarea, numberOffset));
+    cipherText.innerHTML = cipher.decipherMessage(numberOffset, inputTextarea);
+    console.log(cipher.decipherMessage(numberOffset, inputTextarea));
   }
 }
 
