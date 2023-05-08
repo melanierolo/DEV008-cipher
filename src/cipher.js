@@ -1,5 +1,6 @@
 function cipherFormula(numberUnicode, offset, number1, mod) {
   const result = ((numberUnicode + offset - number1) % mod) + number1;
+
   return result;
 }
 
@@ -7,14 +8,16 @@ function decipherFormula(numberUnicode, offset, number1, mod) {
   let result;
   if (numberUnicode - offset - number1 >= 0) {
     result = ((numberUnicode - offset - number1) % mod) + number1;
-  } else {
+  } else if (((numberUnicode - offset - number1) % 26) * -1 === 0) {
+    result = number1;
+  } else if (numberUnicode - offset - number1 < 0) {
     result = ((numberUnicode - offset - number1) % mod) + number1 + mod;
   }
 
   return result;
 }
 
-function cipherMessage(string, numberOffset) {
+function cipherMessage(numberOffset, string) {
   const arrMessage = [...string];
   const numberOfElements = arrMessage.length;
   const newMessage = [];
@@ -48,11 +51,11 @@ function cipherMessage(string, numberOffset) {
       );
     }
   }
-  alert(newMessage.join(""));
+
   return newMessage.join("");
 }
 
-function decipherMessage(string, numberOffset) {
+function decipherMessage(numberOffset, string) {
   const arrMessage = [...string];
   const numberOfElements = arrMessage.length;
   const newMessage = [];
@@ -86,12 +89,14 @@ function decipherMessage(string, numberOffset) {
       );
     }
   }
-  alert(newMessage.join(""));
+  console.log("decipher", newMessage.join(""));
   return newMessage.join("");
 }
-export const cipher = {
+
+const cipher = {
   cipherFormula,
   decipherFormula,
   cipherMessage,
   decipherMessage,
 };
+export default cipher;
