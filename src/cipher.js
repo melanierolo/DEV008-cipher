@@ -22,37 +22,44 @@ function cipherMessage(numberOffset, string) {
   const numberOfElements = arrMessage.length;
   const newMessage = [];
 
-  for (let i = 0; i < numberOfElements; i++) {
-    const letter = arrMessage[i];
+  //TypeError
+  if (typeof numberOffset !== "number" || typeof string !== "string") {
+    throw new TypeError(
+      "The first argument must be number and the second a string."
+    );
+  } else {
+    for (let i = 0; i < numberOfElements; i++) {
+      const letter = arrMessage[i];
 
-    if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
-      newMessage.push(
-        String.fromCodePoint(
-          cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
-        )
-      );
-    } else if (64 < letter.codePointAt(0) && letter.codePointAt(0) < 91) {
-      newMessage.push(
-        String.fromCodePoint(
-          cipherFormula(letter.codePointAt(0), numberOffset, 65, 26)
-        )
-      );
-    } else if (96 < letter.codePointAt(0) && letter.codePointAt(0) < 123) {
-      newMessage.push(
-        String.fromCodePoint(
-          cipherFormula(letter.codePointAt(0), numberOffset, 97, 26)
-        )
-      );
-    } else {
-      newMessage.push(
-        String.fromCodePoint(
-          cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
-        )
-      );
+      if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
+        newMessage.push(
+          String.fromCodePoint(
+            cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
+          )
+        );
+      } else if (64 < letter.codePointAt(0) && letter.codePointAt(0) < 91) {
+        newMessage.push(
+          String.fromCodePoint(
+            cipherFormula(letter.codePointAt(0), numberOffset, 65, 26)
+          )
+        );
+      } else if (96 < letter.codePointAt(0) && letter.codePointAt(0) < 123) {
+        newMessage.push(
+          String.fromCodePoint(
+            cipherFormula(letter.codePointAt(0), numberOffset, 97, 26)
+          )
+        );
+      } else {
+        newMessage.push(
+          String.fromCodePoint(
+            cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
+          )
+        );
+      }
     }
-  }
 
-  return newMessage.join("");
+    return newMessage.join("");
+  }
 }
 
 function decipherMessage(numberOffset, string) {
@@ -60,37 +67,44 @@ function decipherMessage(numberOffset, string) {
   const numberOfElements = arrMessage.length;
   const newMessage = [];
 
-  for (let i = 0; i < numberOfElements; i++) {
-    const letter = arrMessage[i];
+  //TypeError
+  if (typeof numberOffset !== "number" || typeof string !== "string") {
+    throw new TypeError(
+      "The first argument must be number and the second a string."
+    );
+  } else {
+    for (let i = 0; i < numberOfElements; i++) {
+      const letter = arrMessage[i];
 
-    if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
-      newMessage.push(
-        String.fromCodePoint(
-          decipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
-        )
-      );
-    } else if (64 < letter.codePointAt(0) && letter.codePointAt(0) < 91) {
-      newMessage.push(
-        String.fromCodePoint(
-          decipherFormula(letter.codePointAt(0), numberOffset, 65, 26)
-        )
-      );
-    } else if (96 < letter.codePointAt(0) && letter.codePointAt(0) < 123) {
-      newMessage.push(
-        String.fromCodePoint(
-          decipherFormula(letter.codePointAt(0), numberOffset, 97, 26)
-        )
-      );
-    } else {
-      newMessage.push(
-        String.fromCodePoint(
-          decipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
-        )
-      );
+      if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
+        newMessage.push(
+          String.fromCodePoint(
+            decipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
+          )
+        );
+      } else if (64 < letter.codePointAt(0) && letter.codePointAt(0) < 91) {
+        newMessage.push(
+          String.fromCodePoint(
+            decipherFormula(letter.codePointAt(0), numberOffset, 65, 26)
+          )
+        );
+      } else if (96 < letter.codePointAt(0) && letter.codePointAt(0) < 123) {
+        newMessage.push(
+          String.fromCodePoint(
+            decipherFormula(letter.codePointAt(0), numberOffset, 97, 26)
+          )
+        );
+      } else {
+        newMessage.push(
+          String.fromCodePoint(
+            decipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
+          )
+        );
+      }
     }
+    console.log("decipher", newMessage.join(""));
+    return newMessage.join("");
   }
-  console.log("decipher", newMessage.join(""));
-  return newMessage.join("");
 }
 
 const cipher = {
