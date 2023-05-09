@@ -19,6 +19,6 @@ Este proyecto fue diseñado para que los usuarios tengan la posibilidad de cifra
 
 ## Prototipo utilizando Figma
 
-[Prototipo en Figma- MessageCypher](./src/assets/images/Figma-%20cipher_01.jpg)
+![Prototipo en Figma- MessageCypher](./src/assets/images/Figma-%20cipher_01.jpg)
 
-[Prototipo en Figma- MessageCypher](./src/assets/images/Figma-%20cipher_02.jpg)
+![Prototipo en Figma- MessageCypher](./src/assets/images/Figma-%20cipher_02.jpg)
