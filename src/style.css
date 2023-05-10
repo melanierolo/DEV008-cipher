@@ -69,8 +69,12 @@ header {
 .home {
   display: flex;
   flex-direction: row;
-  background: #1b3358;
   height: 100vh;
+  background-color: var(--white);
+  background-image: url(./assets/images/background-home.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .home__enter {
