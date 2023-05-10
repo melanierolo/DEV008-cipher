@@ -5,9 +5,12 @@ const buttonDecipher = document.getElementById("decipher");
 const buttonCopy = document.getElementById("copy");
 const empezarButton = document.getElementsByName("empezarButton")[0];
 
-//Validando que los botones existen para no generar un ERROR
-if (buttonCipher || buttonDecipher || empezarButton) {
+if (empezarButton) {
   empezarButton.addEventListener("click", goToPageCipher);
+}
+
+//Validando que los botones existen para no generar un ERROR
+if (buttonCipher || buttonDecipher) {
   buttonCipher.addEventListener("click", goToCipher);
   buttonDecipher.addEventListener("click", goToDecipher);
   buttonCopy.addEventListener("click", goToCopy);
