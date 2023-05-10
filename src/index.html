@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>MessageCypher | Inicio</title>
+    <title>MessageCypher | Home</title>
   </head>
   <body>
-    <main class="welcome">
-      <section class="welcome__enter">
+    <main class="home">
+      <section class="home__enter">
         <div class="icon">
           <img
             class="icon__img"
@@ -21,20 +21,21 @@
         <h1 class="logo">MessageCypher</h1>
 
         <input
-          class="welcome__input"
-          name="welcome__input"
+          class="home__input"
           placeholder="Nombre"
           type="text"
+          name="userName"
         />
-        <button class="btn btn--primary">Empezar</button>
+        <button class="btn btn--primary" name="empezarButton">Empezar</button>
       </section>
-      <section class="welcome-picture">
+      <section class="home-picture">
         <img
-          class="welcome-picture__img"
+          class="home-picture__img"
           src="./assets/images/dan-nelson-unsplash (1).jpg"
           alt="person in a computer"
         />
       </section>
     </main>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

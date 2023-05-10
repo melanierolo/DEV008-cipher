@@ -3,12 +3,28 @@ import cipher from "./cipher.js";
 const buttonCipher = document.getElementById("cipher");
 const buttonDecipher = document.getElementById("decipher");
 const buttonCopy = document.getElementById("copy");
+const empezarButton = document.getElementsByName("empezarButton")[0];
 
 //Validando que los botones existen para no generar un ERROR
-if (buttonCipher || buttonDecipher) {
+if (buttonCipher || buttonDecipher || empezarButton) {
+  empezarButton.addEventListener("click", goToPageCipher);
   buttonCipher.addEventListener("click", goToCipher);
   buttonDecipher.addEventListener("click", goToDecipher);
   buttonCopy.addEventListener("click", goToCopy);
+}
+
+function goToPageCipher() {
+  const inputUserName = document.getElementsByName("userName")[0].value;
+  const goToCipher = window.location.href.includes("index.html")
+    ? window.location.href.replace("/index.html", "/")
+    : window.location.href;
+  //alert("url-location", goToCipher);
+
+  if (inputUserName === "") {
+    alert("Por favor, no te olvides de ingresar tu nombre 😁 .");
+  } else {
+    window.location.assign(goToCipher + "pages/cipher.html");
+  }
 }
 
 function goToCipher() {

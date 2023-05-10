@@ -66,14 +66,14 @@ header {
 }
 
 /****************Page: Welcome***************/
-.welcome {
+.home {
   display: flex;
   flex-direction: row;
   background: #1b3358;
   height: 100vh;
 }
 
-.welcome__enter {
+.home__enter {
   flex-grow: 1;
   margin: auto;
   padding: 0 100px;
@@ -97,19 +97,19 @@ header {
   padding: 25px;
 }
 
-.welcome__input {
+.home__input {
   width: 100%;
   margin: 16px;
 }
 
-.welcome-picture {
+.home-picture {
   flex-grow: 1;
   padding: 20px;
   /*center element-grid:parent*/
   height: 100%;
   display: grid;
 }
-.welcome-picture__img {
+.home-picture__img {
   width: 490px;
   height: 460px;
   border-radius: 50%;
