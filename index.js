@@ -69,7 +69,7 @@ function goToDecipher() {
       "Por favor,ingrese el valor del offset como un número entero positivo (Ej. 4,5,etc)."
     );
   } else {
-    alert("el botón decipher funciona!!");
+    //alert("el botón decipher funciona!!");
     cipherText.innerHTML = cipher.decipherMessage(numberOffset, inputTextarea);
     console.log(cipher.decipherMessage(numberOffset, inputTextarea));
   }
