@@ -65,6 +65,58 @@ header {
   color: var(--white);
 }
 
+/****************Page: Welcome***************/
+.welcome {
+  display: flex;
+  flex-direction: row;
+  background: #1b3358;
+  height: 100vh;
+}
+
+.welcome__enter {
+  flex-grow: 1;
+  margin: auto;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.icon {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 90px;
+  background: var(--white);
+  gap: 80px;
+}
+
+.icon__img {
+  width: 150px;
+  height: 150px;
+  padding: 25px;
+}
+
+.welcome__input {
+  width: 100%;
+  margin: 16px;
+}
+
+.welcome-picture {
+  flex-grow: 1;
+  padding: 20px;
+  /*center element-grid:parent*/
+  height: 100%;
+  display: grid;
+}
+.welcome-picture__img {
+  width: 490px;
+  height: 460px;
+  border-radius: 50%;
+  /*center element-grid:child*/
+  margin: auto;
+}
+
 /*---------------Section: intro-----------------*/
 
 .intro {
