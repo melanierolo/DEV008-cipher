@@ -31,7 +31,13 @@ function cipherMessage(numberOffset, string) {
     for (let i = 0; i < numberOfElements; i++) {
       const letter = arrMessage[i];
 
-      if (64 < letter.codePointAt(0) && letter.codePointAt(0) < 91) {
+      if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
+        newMessage.push(
+          String.fromCodePoint(
+            cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
+          )
+        );
+      } else if (64 < letter.codePointAt(0) && letter.codePointAt(0) < 91) {
         newMessage.push(
           String.fromCodePoint(
             cipherFormula(letter.codePointAt(0), numberOffset, 65, 26)

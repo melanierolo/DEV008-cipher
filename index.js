@@ -3,12 +3,41 @@ import cipher from "./cipher.js";
 const buttonCipher = document.getElementById("cipher");
 const buttonDecipher = document.getElementById("decipher");
 const buttonCopy = document.getElementById("copy");
+const empezarButton = document.getElementsByName("empezarButton")[0];
+const greeting = localStorage.getItem("username")
+  ? `Hola 👋 ${localStorage.getItem("username")} 🎉`
+  : `no-name`;
+
+if (empezarButton) {
+  empezarButton.addEventListener("click", goToPageCipher);
+}
 
 //Validando que los botones existen para no generar un ERROR
 if (buttonCipher || buttonDecipher) {
   buttonCipher.addEventListener("click", goToCipher);
   buttonDecipher.addEventListener("click", goToDecipher);
   buttonCopy.addEventListener("click", goToCopy);
+}
+
+function goToPageCipher() {
+  const inputUserName = document.getElementsByName("userName")[0].value;
+  const goToCipher = window.location.href.includes("index.html")
+    ? window.location.href.replace("/index.html", "/")
+    : window.location.href;
+  //alert("url-location", goToCipher);
+
+  if (inputUserName === "") {
+    alert("Por favor, no te olvides de ingresar tu nombre 😁 .");
+  } else {
+    window.location.assign(goToCipher + "pages/cipher.html");
+    //guardar nombre en el local storage
+    localStorage.setItem("username", inputUserName);
+  }
+}
+
+//Añadir el nombre del usuario en el header de cipher.html
+if (greeting !== "no-name") {
+  document.getElementsByClassName("header__welcome")[0].innerHTML = greeting;
 }
 
 function goToCipher() {

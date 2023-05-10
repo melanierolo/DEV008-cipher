@@ -1,90 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <title>MessageCypher | Home</title>
   </head>
   <body>
-    <a href=""></a>
-    <header class="header">
-      <h1 class="header__nav"><a class="logo" href="">MessageCypher</a></h1>
-      <nav class="header__nav">
-        <p class="header__welcome">Hola 👋</p>
-      </nav>
-    </header>
-    <main>
-      <section class="intro">
-        <picture class="intro__picture">
+    <main class="home">
+      <section class="home__enter">
+        <div class="icon">
           <img
-            class="intro__image"
-            src="./assets/images/ROT13_table_with_example.png"
-            alt="ROT13 from wikipedia"
+            class="icon__img"
+            src="./assets/icon/icon-secure.png"
+            alt="icon secure"
           />
-        </picture>
-        <article class="intro__content">
-          <h2 class="intro__title">MessageCypher</h2>
-          <p class="intro__text">
-            Aquí tienes la posibilidad de cifrar tus mensajes para que al dar
-            tus comentarios en algún foro, no reveles algún “spoiler” de la
-            solución de un problema.De tal forma, podrás compartir tus opiniones
-            sin incomodar a los demás.
-          </p>
-          <p class="intro__text">
-            También, lo podrías usar para dar un poco de privacidad a tus
-            mensajes y de esta manera evitar miradas indiscretas.
-          </p>
-        </article>
+        </div>
+
+        <h1 class="logo">MessageCypher</h1>
+
+        <input
+          class="home__input"
+          placeholder="Nombre"
+          type="text"
+          name="userName"
+        />
+        <button class="btn btn--primary" name="empezarButton">Empezar</button>
       </section>
-      <section class="cipher">
-        <h2 class="cipher__title">Mensajes secretos, ¡Cifremos!</h2>
-
-        <article class="cipher__content">
-          <h3 class="cipher__subtitle">Mensaje :</h3>
-          <label class="cipher__label" for=""
-            >Offset (desplazamiento) :<input
-              class="cipher__input"
-              name="cipher__input"
-              placeholder="Número"
-              type="number"
-              min="1"
-          /></label>
-          <br />
-          <textarea
-            class="cipher__textarea"
-            name="cipher__textarea"
-            rows="3"
-            placeholder="Escriba el texto que desea cifrar o descifrar en este campo."
-          ></textarea>
-          <div class="cipher__buttons">
-            <button class="btn btn--primary btn--small" id="cipher">
-              Cifrar
-            </button>
-            <button
-              class="btn btn--secondary btn--small btn--border"
-              id="decipher"
-            >
-              Descifrar
-            </button>
-          </div>
-
-          <h3 class="cipher__subtitle">Mensaje cifrado / descifrado:</h3>
-          <p class="cipher__text" id="cipher__text">
-            Falta ingresar el texto que desea cifrar o descifrar.
-          </p>
-          <button class="btn btn--primary btn--small" id="copy">Copiar</button>
-        </article>
+      <section class="home-picture">
+        <img
+          class="home-picture__img"
+          src="./assets/images/dan-nelson-unsplash (1).jpg"
+          alt="person in a computer"
+        />
       </section>
     </main>
-    <footer class="footer">
-      <p class="footer__text">
-        <span
-          >Copyright &#169;2023 | Coded by Melanie Rodas - All rights
-          reserved</span
-        >
-      </p>
-    </footer>
-    <script src="index.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
