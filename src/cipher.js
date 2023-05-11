@@ -31,7 +31,7 @@ function cipherMessage(numberOffset, string) {
     for (let i = 0; i < numberOfElements; i++) {
       const letter = arrMessage[i];
 
-      if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
+      if (32 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
         newMessage.push(
           String.fromCodePoint(
             cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
@@ -50,11 +50,7 @@ function cipherMessage(numberOffset, string) {
           )
         );
       } else {
-        newMessage.push(
-          String.fromCodePoint(
-            cipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
-          )
-        );
+        newMessage.push(String.fromCodePoint(letter.codePointAt(0)));
       }
     }
 
@@ -76,7 +72,7 @@ function decipherMessage(numberOffset, string) {
     for (let i = 0; i < numberOfElements; i++) {
       const letter = arrMessage[i];
 
-      if (31 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
+      if (32 < letter.codePointAt(0) && letter.codePointAt(0) < 65) {
         newMessage.push(
           String.fromCodePoint(
             decipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
@@ -95,11 +91,7 @@ function decipherMessage(numberOffset, string) {
           )
         );
       } else {
-        newMessage.push(
-          String.fromCodePoint(
-            decipherFormula(letter.codePointAt(0), numberOffset, 32, 33)
-          )
-        );
+        newMessage.push(String.fromCodePoint(letter.codePointAt(0)));
       }
     }
     console.log("decipher", newMessage.join(""));
